@@ -1,0 +1,82 @@
+:root {
+	--background-color: white;
+}
+* {
+	box-sizing: border-box;
+	position: relative;
+}
+body {
+	accent-color: $theme-color;
+	margin: 0;
+}
+::selection {
+	background-color: $theme-color;
+	color: #eee;
+}
+#gatsby-focus-wrapper {
+	background-color: var(--background-color);
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	font-family: sans-serif;
+	line-height: 1.2;
+	min-height: 100vh;
+}
+header, footer {
+	background-color: $theme-color;
+	color: #eee;
+	a {
+		color: #eee;
+	}
+	a:hover {
+		color: #fff;
+	}
+}
+header {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	padding: 18px 0 12px;
+	text-align: center;
+	h1 {
+		display: inline-block;
+		font-family: 'Arial Black', sans-serif;
+		font-size: 56px;
+		margin: 0;
+		text-transform: uppercase;
+		img {
+			height: 65px;
+			vertical-align: text-bottom;
+			filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+			margin: 0 30px;
+		}
+	}
+}
+#main-container {
+	display: flex;
+	flex-wrap: wrap;
+	grid-row: 2;
+	justify-content: center;
+}
+main {
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+	max-width: 700px;
+	padding: 4px 1rem 18px;
+}
+.no-break {
+	display: inline-block;
+	white-space: nowrap;
+}
+.split {
+	display: flex;
+	flex-wrap: wrap;
+}
+footer {
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+	grid-row: 3;
+	padding: 15px;
+	text-align: center;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #222;
+		color: #eee;
+	}
+}
